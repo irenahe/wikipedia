@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block pageTitle %}{{p.title}}{% endblock %}
+
+{% block content %}
+
+
+<div class="edit">
+	{% if user %}
+		<a href="/_edit/{{p.title}}?v={{p.key().id()}}">Edit this page</a> | 
+	{% endif %}
+	<a href="/_history/{{p.title}}">History</a><br>
+</div>
+
+<article>
+	<h1 class="text-primary"><em>{{p.title}}</em></h1>
+	<p>{{p.content | safe}}</p>
+</article>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block pageTitle %}History | {{title}}{% endblock %}
+
+{% block content %}
+
+<article>
+	<h1>History: {{title}}</h1>
+	{% for p in historyP %}
+		<h5>Created: {{p.created.strftime('%c')}}</h5>
+		{% if user %}
+			<a href="/_edit/{{p.title}}?v={{p.key().id()}}">Edit</a> | 
+		{% endif %}
+		<a href="/{{p.title}}?v={{p.key().id()}}">View</a>
+		<p>{{p.content[:100]}}...</p>
+		<hr>
+	{% endfor %}
+</article>
+
+{% endblock %}

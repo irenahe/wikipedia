@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}Search Result{% endblock %}
+
+{% block content %}
+<div class="page-centre">
+    <h1>Page not found.</h1><br>
+    {% if user %}
+        <p>Create a <a href="/_edit/{{p}}">new page</a>.</p>
+    {% else %}
+        <p><a href="/login">Login</a> to create a new page.</p>
+    {% endif %}
+    
+    <p>Go back to <a href="/">Home</a>.</p>
+    
+</div>
+{% endblock %}

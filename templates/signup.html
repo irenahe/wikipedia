@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block pageTitle %}Sign up{% endblock %}
+
+
+{% block content %}
+
+
+<form method="post" class="form-centre">
+    <fieldset>
+    	<legend>Signup</legend>
+    	<div class="form-group">
+   	        <input type="text" name="username" class="form-control" placeholder="Username" value="{{username}}">
+  			<span style="color:red">{{errorUsername}}</span>
+        </div>
+    	<div class="form-group">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+        	<span style="color:red">{{errorPassword}}</span>
+        </div>
+    	<div class="form-group">
+            <input type="password" name="verify" placeholder="Verify Password" class="form-control">
+        	<span style="color:red">{{errorVerify}}</span>
+        </div>
+    	<div class="form-group">
+            <input type="text" name="email" class="form-control" placeholder="Email (optional)" value="{{email}}">
+        	<span style="color:red">{{errorEmail}}</span>
+        </div>
+    	<input hidden type="text" name="nextUrl" value="{{nextUrl}}">
+    	<button type="submit" class="btn btn-default">Signup</button>
+    </fieldset>
+</form>
+
+{% endblock %}

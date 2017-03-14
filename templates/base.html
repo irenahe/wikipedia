@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{% block pageTitle %}The Page Title{% endblock %}</title>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/wiki.css">
+    </head>
+    
+    <body class="container-fluid">
+        <!--page title-->
+        <h1 class="title-top">
+            {% block title %}<a href="/">Wikipedia</a>{% endblock %}
+        </h1>
+        
+        <!--nav bar-->
+        <nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					{% if user %}
+						<li><a>{{user.username}}</a></li>
+						<li><a href="/logout">Logout</a></li>
+					{% else %}
+						<li><a href="/">Home</a></li>
+						<li><a href="/signup">Sign up</a></li>
+						<li><a href="/login">Login</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</nav>
+        
+        <!--page content-->
+        <div>
+     	   {% block content %}
+     	   {% endblock %}
+        </div>
+    </body>
+</html>

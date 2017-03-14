@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}Wikipedia Homepage{% endblock %}
+
+{% block content %}
+<form action="/search-redirect" class="page-centre">
+	<input type="text" class="form-control" name="search">
+	<button type="submit" class="btn btn-default btn-centre">Search</button>
+</form>
+{% endblock %}
