@@ -6,7 +6,7 @@ body{
 .title-top{
     text-align: center;
     line-height: 100px;
-    
+
     background-color: #c8daf5;
     height: 100px;
     margin: 0px
@@ -55,7 +55,7 @@ legend {
     width: auto;
     border: none;
     color: rgba(0, 0, 0, 0.5);
-    
+
 }
 
 .edit{

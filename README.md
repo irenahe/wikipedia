@@ -1,5 +1,5 @@
 # Wikipedia
-A basic Wikipedia page that allows users to enter almost any url and start editing the page content.
+A basic Wikipedia page that allows users to enter almost any word (currently only supports numbers, letters, underscore, and hyphen) and start editing the page content.
 
 ### User registration
 Username and password must be at least 3 characters long. Email address is not required.
